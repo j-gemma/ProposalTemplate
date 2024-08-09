@@ -1,0 +1,8 @@
+#Ignore data.js, logos, and /dist
+/assets/logoVectorSmall.jpg
+/assets/logo-transparent-background.png
+/assets/logoHiRes.jpg
+/assets/data.js
+/assets/sigImg.jpg
+
+/dist/

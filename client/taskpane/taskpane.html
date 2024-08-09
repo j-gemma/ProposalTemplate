@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> FS Proposal Generator Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <link rel="stylesheet"
+        href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-Fabric" dir="ltr">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-transparent-background.png" alt="Contoso" title="Contoso" />
+        <h1 class="ms-font-su">New Proposal</h1>
+    </header>
+    <!-- <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing" rel="noopener noreferrer">sideload</a> your add-in to see app body.</h2>
+    </section> -->
+    <main id="app-body" class="ms-welcome__main">
+        <label for="sig">Paste recipient signature below:</label>
+        <textarea name="sig" id="sig" rows="6" cols="15"></textarea>
+
+        <label for="ref">Job Reference:</label>
+        <input type="text" id="ref" name="ref">
+        <label for="loc">Job Location:</label>
+        <input type="text" id="loc" name="loc">
+
+        <!--<div class="ms-grid ms-fontColor-themePrimary ms-depth-64">Big blue text</div> -->
+
+        <br>
+        <div class="check-me">
+            <input type="checkbox" id="include_existing" name="include_existing" />
+            <label for="include_existing">Include existing equipment section</label>
+            <br><br>
+            <input type="checkbox" id="include_insurance" name="include_insurance" />
+            <label for="include_insurance">Include insurance section</label>
+            <br><br>
+            <label for="num_meetings">Number of Meetings Included: </label>
+            <input type="number" id="num_meetings" name="num_meetings" />
+            <br><br>
+            <label for="num_visits">Number of Site Visits Included: </label>
+            <input type="number" id="num_visits" name="num_visits" />
+            <br><br>
+
+
+        </div>
+        <div class="my-taskpane-table">
+            <table id="cost-table">
+            </table>
+        </div>
+
+        <div role="button" id="generate" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+            <span class="ms-Button-label">Generate</span>
+            <br>
+        </div>
+
+    </main>
+</body>
+
+
+</html>

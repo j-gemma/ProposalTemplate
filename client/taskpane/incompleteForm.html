@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incomplete Form</title>
+  
+  Office JavaScript API
+  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+  <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css" />
+  <link href="taskpane.css" rel="stylesheet" type="text/css" />
+  
+  Dialog script
+  <script src="incompleteForm.js"></script>
+</head>
+<body class="ms-Fabric" dir="ltr">
+  <header class="ms-welcome__header ms-bgColor-neutralLighter">
+    <h1 class="ms-font-su">Incomplete Form</h1>
+  </header>
+  <main>
+    <div role="button" id="close_dialog" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+      <span class="ms-Button-label">Close</span>
+      <br>
+    </div>
+
+    <script>document.getElementById("close_dialog").onclick = function() {
+      Office.context.ui.messageParent("close");
+    };</script>
+  </main>
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en-US">
+ 
+ <!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+ <!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+ 
+ <head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>FS Proposal Generator Task Pane Add-in</title>
+ 
+     <!-- Office JavaScript API -->
+     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+     
+     <link
+         rel="stylesheet"
+         href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"
+     />
+ 
+     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+     <link rel="manifest" href="/assets/site.webmanifest">
+     <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+     <meta name="msapplication-TileColor" content="#da532c">
+     <meta name="theme-color" content="#ffffff">
+ 
+     <!-- Template styles -->
+     <link href="taskpane.css" rel="stylesheet" type="text/css" />
+
+     
+     <script type="text/javascript" src="incompleteForm.js"></script>
+ </head>
+ 
+ <body class="ms-Fabric" dir="ltr">
+     <header class="ms-welcome__header ms-bgColor-neutralLighter">
+         <img width="90" height="90" src="../../assets/logo-transparent-background.png" alt="Contoso" title="Contoso" />
+         <h1 class="ms-font-su">Incomplete Form</h1>
+     </header>
+     
+     <main>
+         <p>Please completely fill in the form and resubmit</p>
+ 
+         <form> <button type="submit" id="close_dialog" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl" aria-label="Close dialog">
+          <span class="ms-Button-label">Close</span>
+        </button>
+        </form>
+
+     </main>
+ </body>
+ 
+ </html>
+ 
